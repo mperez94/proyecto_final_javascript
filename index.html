@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Glops!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="dist/notifications.css">
+        <script src="dist/notifications.js"></script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="d-flex align-items-center" id="clima">
+                <img src="" alt="" id="icono">
+            </div>
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">Glops!</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 usuarioLogin">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Iniciar Sesion/Registrarse</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item btnLogin">Iniciar Sesion</a></li>
+                                    <li><a class="dropdown-item" href="">Registrarse</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                    <div class="d-flex align-items-center btn-group">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-cart-fill me-1 "></i>
+                            CARRITO
+                            <span id="carrito" class="badge bg-dark text-white ms-1 rounded-pill "><i class="bi bi-currency-dollar"></i>0</span>
+                        </button>
+                        <div class="dropdown-menu table-responsive bg-dark bordeCarrito">
+                            <table id="listaCarrito" class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col" >Bebida</th>
+                                    <th scope="col" >Unidades</th>
+                                    <th scope="col" >$</th>
+                                    <th scope="col" ><i class="bi bi-trash"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tablaItems" >
+                                    <th></th>
+                                    <th>CARRITO VACIO</th>
+                                    <th></th>
+                                </tbody>                    
+                            </table>
+                            <div class="d-flex justify-content-center">
+                                <a href="#compra"><button href="" type="button" class="btn btn-success btnComprar" >COMPRAR</button></a>
+                                <button type="button" class="btn btn-danger btnLimpiar" >VACIAR CARRITO</button>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header--> 
+        <header class="bg-dark py-5">
+            <section id="login" class="">
+                <div class="d-flex justify-content-center" id="main">
+                    <form action="" autocomplete="off">
+                        <label for="" >Usuario</label>
+                        <br>
+                        <input type="text" placeholder="Usuario" id="usuario">
+                        <br>
+                        <label for="" >Contraseña</label>
+                        <br>
+                        <input type="password" placeholder="******" id="contrasenia">
+                        <br>
+                        <button type="button" class="btn btn-success btnIngresar" >INGRESAR</button>
+                        <button type="button"  class="btn btn-danger btnCancelar" >CANCELAR</button>
+                        <br>
+                        <span class="error " >Datos Incorrectos</span>
+                        <span class="aceptado " > Ingresando</span>
+                    </form>
+                </div>
+                
+            </section>
+            <div class="px-4 px-lg-5 my-5 glops" >
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder ">Glops!</h1>
+                    <p class="lead fw-normal text-white-100 mb-0">Quedate en casa, Nosotros te lo llevamos...</p>
+                    <p class="lead fw-normal text-white-100 mb-0">Si sos usuario, Tenes un 10% OFF!!!</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <!-- CARD VINO -->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="images/vino.png" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Vino "Cordero con piel de Lobo"</h5>
+                                    <!-- Product price-->
+                                    <h6><i class="bi bi-currency-dollar"></i>500.00</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a data-id="1" class="btn btn-outline-dark mt-auto botonCompra vino">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="images/cerveza.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div  class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Cerveza Patagonia</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$400.00</span>
+                                    <h6><i class="bi bi-currency-dollar"></i>300</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a data-id="2" class="btn btn-outline-dark mt-auto botonCompra cerveza">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" >Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="images/coca.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div  class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Coca-Cola</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$250.00</span>
+                                    <h6><i class="bi bi-currency-dollar"></i>200.00</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a data-id="3" class="btn btn-outline-dark mt-auto botonCompra coca" >Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5" >
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="images/jugo.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Jugo de Naranja</h5>
+                                    <!-- Product price-->
+                                    <h6><i class="bi bi-currency-dollar"></i>100.00</h6>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a data-id="4" class="btn btn-outline-dark mt-auto botonCompra jugo">Añadir al carrito</a></div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <div id="compra" class=" bg-dark">
+            <div class="finTabla" >
+                <table class="table">
+                    <thead>
+                        <tr >
+                            <th scope="col">Bebida</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Valor x Unidad</th>
+                            <th class="trashIcon" scope="col" ><i class="bi bi-trash"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody class="tablaFinal">
+
+                    </tbody>
+                </table>
+                <input type="radio" class="btn-check"  name="options-outlined" id="success-outlined" autocomplete="off">
+                <label class="btn btn-outline-success btnEnvio bt" for="success-outlined">CON ENVIO</label>
+                 <input type="radio" class="btn-check"  name="options-outlined" id="danger-outlined" autocomplete="off" checked>
+                <label class="btn btn-outline-danger btnNoEnvio bt" for="danger-outlined">SIN ENVIO</label>
+            </div>
+            <form class="formEnvio"  >
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example1" class="form-control nombre obligatorio" />
+                      <label class="form-label cambio" for="form6Example1" >Nombre *</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example2" class="form-control apellido" />
+                      <label class="form-label" for="form6Example2" >Apellido</label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form6Example3" class="form-control direccion obligatorio" />
+                  <label class="form-label cambio" for="form6Example3" >Direccion *</label>
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form6Example4" class="form-control departamento" />
+                  <label class="form-label" for="form6Example4" >Departamento</label>
+                </div>
+                                
+                <!-- Number input -->
+                <div class="form-outline mb-4">
+                  <input type="number" id="form6Example6" class="form-control telefono obligatorio" />
+                  <label class="form-label cambio" for="form6Example6" >Telefono/Celular *</label>
+                </div>
+              
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                  <textarea class="form-control aclaraciones" id="form6Example7" rows="4"></textarea>
+                  <label class="form-label" for="form6Example7" >Aclaraciones</label>
+                  <p style="color: white;">* Datos Obligatorios</p>
+                </div>
+                
+              </form>
+                <div class="factura">
+                    <button href="" type="button" class="btn btn-success btnFin">FINALIZAR COMPRA</button>
+                </div>
+            </div>
+
+<!-- Footer-->
+            <footer class="py-5 bg-dark">
+                <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Glops! 2021</p></div>
+            </footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+        
+    </body>
+    <script src="js/clasePerez.js"></script>
+</html>
